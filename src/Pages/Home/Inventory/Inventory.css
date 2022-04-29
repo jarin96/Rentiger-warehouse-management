@@ -12,3 +12,8 @@
 .inventory-price {
     color: red;
 }
+
+.btn-inventory {
+    color: white;
+    background-color: blueviolet;
+}
