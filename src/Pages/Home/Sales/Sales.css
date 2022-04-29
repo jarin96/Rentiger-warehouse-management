@@ -4,6 +4,10 @@
     grid-gap: 10px;
 }
 
+.sales-info {
+    /* background-color: rgb(200, 174, 238); */
+}
+
 @media only screen and (max-width: 576px) {
     .sales-container {
         grid-template-columns: repeat(1, 1fr);

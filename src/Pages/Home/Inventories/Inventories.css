@@ -3,6 +3,10 @@
     color: blueviolet;
 }
 
+.inventories-info {
+    background-color: antiquewhite;
+}
+
 .inventories-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

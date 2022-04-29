@@ -16,17 +16,18 @@ const sales = [
 
 const Sales = () => {
     return (
-        <div className='container'>
-            {/* <h2 className='text-center'>New arrivals</h2> */}
-            <h3 className='text-center mt-5'>FLASH SALE</h3>
-            <h4 className='text-center mt-2'>UP TO 50% OFF*</h4>
-            <div className="sales-container">
-                {
-                    sales.map(sale => <Sale
-                        key={sale.id}
-                        sale={sale}
-                    ></Sale>)
-                }
+        <div>
+            <div id='sale' className='container'>
+                <h3 className='text-center mt-5'>FLASH SALE</h3>
+                <h4 className='text-center mt-2'>UP TO 50% OFF*</h4>
+                <div className="sales-container">
+                    {
+                        sales.map(sale => <Sale
+                            key={sale.id}
+                            sale={sale}
+                        ></Sale>)
+                    }
+                </div>
             </div>
         </div>
     );
