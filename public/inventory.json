@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "name": "Full Length Dress",
+        "img": "https://i.ibb.co/HxHyRt4/dress1.png",
+        "description": "Striped Pique Resort Belted Shirt Dress",
+        "price": 59,
+        "quantity": 5,
+        "supplier": "NICHP CO LTD"
+    },
+    {
+        "id": 2,
+        "name": "Women Shirt Dress",
+        "img": "https://i.ibb.co/pZFb5Ly/dress2.png",
+        "description": "Linen Mix Half Placket Midi Shirt Dress",
+        "price": 55,
+        "quantity": 7,
+        "supplier": "Ponie International (HK) Ltd"
+    },
+    {
+        "id": 3,
+        "name": "Midi Dress",
+        "img": "https://i.ibb.co/JxT7VKp/dress3.png",
+        "description": "Pique Striped Button Through Flatlock Midi Dress",
+        "price": 41.33,
+        "quantity": 10,
+        "supplier": "NICHP CO LTD"
+    },
+    {
+        "id": 4,
+        "name": "Black Magic Midi Dress",
+        "img": "https://i.ibb.co/VDzSpBM/dress4.png",
+        "description": "Linen Mix Utility Tie Waist Midi Dress",
+        "price": 55.33,
+        "quantity": 6,
+        "supplier": "S Fashion Manufacturing Ltd"
+    },
+    {
+        "id": 5,
+        "name": "Slip Dress",
+        "img": "https://i.ibb.co/WtxnHdz/dress5.png",
+        "description": "Embellished Floral Midi Slip Dress",
+        "price": 139,
+        "quantity": 7,
+        "supplier": "NICHP CO LTD"
+    },
+    {
+        "id": 6,
+        "name": "Mini Dress",
+        "img": "https://i.ibb.co/m017qZR/dress6.png",
+        "description": "Print Cut Out Mini Dress, with Floral Print",
+        "price": 55.3,
+        "quantity": 11,
+        "supplier": "NICHP CO LTD"
+    },
+    {
+        "id": 7,
+        "name": "Pink Mini Dress",
+        "img": "https://i.ibb.co/sVLTvcW/dress7.png",
+        "description": "Lace V Neck Mini Dress in pink colour",
+        "price": 104.5,
+        "quantity": 12,
+        "supplier": "Nubes Design"
+    },
+    {
+        "id": 8,
+        "name": "Short Sleeve Dress",
+        "img": "https://i.ibb.co/HHtBjj1/dress8.png",
+        "description": "Short Sleeve Pleated Mini Shirt Dress Animal",
+        "price": 52.5,
+        "quantity": 4,
+        "supplier": "Starlink Development Ltd"
+    },
+    {
+        "id": 9,
+        "name": "Ladies Evening Dress",
+        "img": "https://i.ibb.co/q7bs99W/dress9.png",
+        "description": "Sequin Twist Neck Midi Dress in blue and green pattern",
+        "price": 62.34,
+        "quantity": 5,
+        "supplier": "NICHP CO LTD"
+    },
+    {
+        "id": 10,
+        "name": "Butterfly Recycled Print Dress",
+        "img": "https://i.ibb.co/stKTBRw/dress10.png",
+        "description": "Butterfly Recycled Print Cross Back Midi Dress in blue colour",
+        "price": 41.3,
+        "quantity": 3,
+        "supplier": "Gamillex Co Ltd"
+    },
+    {
+        "id": 11,
+        "name": "Winter Dress",
+        "img": "https://i.ibb.co/8KPstpB/dress11.png",
+        "description": "Plus Size Fluid Twill Button Through Belted Shirt Dress",
+        "price": 62,
+        "quantity": 8,
+        "supplier": "NICHP CO LTD"
+    },
+    {
+        "id": 12,
+        "name": "Black Dress",
+        "img": "https://i.ibb.co/WfhjyZp/dress12.png",
+        "description": "Petite Pique Sweetheart Neck Midi Dress in Black Colour",
+        "price": 59,
+        "quantity": 5,
+        "supplier": "Head De Co Ltd"
+    }
+]

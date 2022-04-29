@@ -1,0 +1,14 @@
+.inventory {
+    border: 1px solid rgb(253, 251, 251);
+    border-radius: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.inventory-name {
+    color: blueviolet;
+}
+
+.inventory-price {
+    color: red;
+}
