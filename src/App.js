@@ -10,6 +10,7 @@ import Register from './Pages/Login/Register/Register';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import AddInventoryItem from './Pages/Home/AddInventoryItem/AddInventoryItem';
 
 function App() {
 
@@ -19,7 +20,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/inventory/:id' element={<InventoryDetail></InventoryDetail>}></Route>
+        <Route path='/inventory/:id' element={
+          <RequireAuth>
+            <InventoryDetail></InventoryDetail>
+          </RequireAuth>
+        }></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
@@ -28,6 +33,7 @@ function App() {
             <ManageInventory></ManageInventory>
           </RequireAuth>
         }></Route>
+        <Route path='/addinventory' element={<AddInventoryItem></AddInventoryItem>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
