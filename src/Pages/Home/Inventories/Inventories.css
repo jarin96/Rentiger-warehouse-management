@@ -3,14 +3,14 @@
     color: blueviolet;
 }
 
-.inventories-info {
-    background-color: antiquewhite;
-}
-
 .inventories-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+}
+
+.inventory-info {
+    background-color: rgb(255, 255, 252);
 }
 
 @media only screen and (max-width: 576px) {

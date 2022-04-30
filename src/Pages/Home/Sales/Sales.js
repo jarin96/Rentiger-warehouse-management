@@ -16,7 +16,7 @@ const sales = [
 
 const Sales = () => {
     return (
-        <div>
+        <div className='sales-info'>
             <div id='sale' className='container'>
                 <h3 className='text-center mt-5'>FLASH SALE</h3>
                 <h4 className='text-center mt-2'>UP TO 50% OFF*</h4>
