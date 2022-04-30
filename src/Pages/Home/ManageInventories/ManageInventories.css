@@ -1,0 +1,30 @@
+.inventory-item {
+    border: 1px solid #95A0A7;
+    background-color: rgb(255, 255, 243);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 25px;
+    width: 800px;
+    display: flex;
+}
+
+.inventory-item img {
+    width: 200px;
+    height: 300px;
+}
+
+.manage-item-details p {
+    margin: 10px;
+}
+
+.manage-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.manage-item-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

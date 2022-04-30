@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import './InventoryDetail.css';
 
 const InventoryDetail = () => {
@@ -20,6 +20,11 @@ const InventoryDetail = () => {
                 <p>Sold: {location?.state?.sold}</p>
                 <h4>Quantity: {quantity}</h4>
                 <button className='btn-inventory btn btn-outline-light' onClick={() => setQuantity(location?.state?.quantity - 1)}>Delivered</button>
+            </div>
+            <div className='text-center mt-4'>
+                <Link to='/manageinventory'>
+                    <button className='btn btn-dark btn btn-outline-primary'>Manage Inventories</button>
+                </Link>
             </div>
         </div>
     );

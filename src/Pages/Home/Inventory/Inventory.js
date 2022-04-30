@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Inventory.css';
 const Inventory = ({ inventory }) => {
     const { id, name, img, price, description, quantity, supplier } = inventory;
@@ -10,15 +10,18 @@ const Inventory = ({ inventory }) => {
         console.log(id);
     }
     return (
-        <div className='inventory'>
-            <img src={img} alt="" />
-            <h2 className='inventory-name fst-italic fs-4'>{name}</h2>
-            <p className='inventory-price'>Price: ${price}</p>
-            <p>{description}</p>
-            <p>Supplier: {supplier}</p>
-            <p>Quantity: {quantity}</p>
-            <button onClick={() => navigateInventory(inventory)} className='btn-inventory btn btn-outline-light'>Update</button>
+        <div>
+            <div className='inventory'>
+                <img src={img} alt="" />
+                <h2 className='inventory-name fst-italic fs-4'>{name}</h2>
+                <p className='inventory-price'>Price: ${price}</p>
+                <p>{description}</p>
+                <p>Supplier: {supplier}</p>
+                <p>Quantity: {quantity}</p>
+                <button onClick={() => navigateInventory(inventory)} className='btn-inventory btn btn-outline-light'>Update</button>
+            </div>
         </div>
+
     );
 };
 
