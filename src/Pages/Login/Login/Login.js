@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import login from '../../../images/Login Page/Login.png';
 const Login = () => {
     const emailRef = useRef('');
@@ -43,7 +43,7 @@ const Login = () => {
                                     Submit
                                 </Button>
                             </Form>
-                            <p>New to Rentiger Warehouse? <span className='text-danger' onClick={navigateToRegister}>Please Register</span></p>
+                            <h5 className='mt-4'>New to Rentiger Warehouse? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateToRegister}>Please Register</Link></h5>
                         </div>
                     </div>
                     <div className='col-lg-5 col-md-6 col-12'>
