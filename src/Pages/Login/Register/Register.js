@@ -11,6 +11,10 @@ const Register = () => {
 
     const submitRegister = e => {
         e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
     }
     return (
         <div>
