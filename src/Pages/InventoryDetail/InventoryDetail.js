@@ -25,7 +25,7 @@ const InventoryDetail = () => {
                     </div>
                     <div className='mx-auto w-50 ms-4'>
                         <div>
-                            <div className='mt-2'>
+                            <div className='mt-3'>
                                 <h5 className='inventory-name fst-italic fs-4'>Restock the items</h5>
                                 <input type="number" name="number" id="" />
                                 <button className='text-center btn-inventory btn btn-outline-light' onClick={() => setQuantity(quantity + 1)}>Restock</button>
