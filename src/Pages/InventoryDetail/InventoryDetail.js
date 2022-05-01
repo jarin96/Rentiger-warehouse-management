@@ -8,6 +8,11 @@ const InventoryDetail = () => {
     const location = useLocation();
     const [quantity, setQuantity] = useState(location?.state?.quantity);
     console.log(location);
+    const submitForm = event => {
+        event.preventDefault();
+        const number = event.target.number.value;
+        setQuantity(parseInt(number) + parseInt(quantity));
+    }
     return (
         <div>
             <div className=' mx-auto w-50'>
@@ -24,13 +29,13 @@ const InventoryDetail = () => {
                         <button className='btn-inventory btn btn-outline-light' onClick={() => setQuantity(quantity - 1)}>Delivered</button>
                     </div>
                     <div className='mx-auto w-50 ms-4'>
-                        <div>
+                        <form onSubmit={submitForm}>
                             <div className='mt-3'>
                                 <h5 className='inventory-name fst-italic fs-4'>Restock the items</h5>
                                 <input type="number" name="number" id="" />
-                                <button className='text-center btn-inventory btn btn-outline-light' onClick={() => setQuantity(quantity + 1)}>Restock</button>
+                                <button className='text-center btn-inventory btn btn-outline-light' onClick={() => setQuantity(quantity)}>Restock</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div className='text-center mt-4'>
                         <Link to='/manageinventory'>
