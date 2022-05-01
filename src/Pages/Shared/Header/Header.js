@@ -23,6 +23,27 @@ const Header = () => {
                             <Nav.Link href="home#collection">Collection</Nav.Link>
                         </Nav>
                         <Nav>
+                            {
+                                user ?
+                                    <Link to='/manageinventory'>
+                                        <button className='btn btn-link text-decoration-none'>Manage Items</button>
+                                    </Link>
+                                    :
+                                    ''}
+                            {
+                                user ?
+                                    <Link to='/additem'>
+                                        <button className='btn btn-link text-decoration-none'>Add Item</button>
+                                    </Link>
+                                    :
+                                    ''}
+                            {
+                                user ?
+                                    <Link to='/myitems'>
+                                        <button className='btn btn-link text-decoration-none'>My items</button>
+                                    </Link>
+                                    :
+                                    ''}
                             <Nav.Link as={Link} to="about">About</Nav.Link>
                             {
                                 user ?

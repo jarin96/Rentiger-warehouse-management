@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import register from '../../../images/Login Page/Register.png';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Register.css';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
+    let errorMessage;
 
     const navigateToLogin = () => {
         navigate('/login');
@@ -20,13 +23,23 @@ const Register = () => {
     if (user) {
         navigate('/home');
     }
+    if (loading || updating) {
+        return <Loading></Loading>
+    }
+    if (error || updateError) {
+        errorMessage = <div>
+            <p className='text-danger'>Error: {error?.message} {updateError?.message}</p>
+        </div>
 
-    const submitRegister = event => {
+    }
+    const submitRegister = async event => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        alert('Updated profile');
     }
     return (
         <div>
@@ -43,6 +56,7 @@ const Register = () => {
                                     <input type="password" name="password" id="" placeholder='Password' required />
                                     <input className='mt-4 w-50 mx-auto btn-inventory btn btn-outline-light' type="submit" value="Register" />
                                 </form>
+                                {errorMessage}
                                 <h5 className='mt-4 text-center'>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateToLogin}>Please Login</Link></h5>
                                 <SocialLogin></SocialLogin>
                             </div>

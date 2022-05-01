@@ -2,9 +2,13 @@ import { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
+import Loading from '../../Shared/Loading/Loading';
 import auth from '../../../firebase.init';
 import login from '../../../images/Login Page/Login.png';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -23,12 +27,16 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
     if (error) {
         errorMessage = <div>
             <p className='text-danger'>Error: {error?.message}</p>
         </div>
 
     }
+
     const handleSubmit = e => {
         e.preventDefault();
         const email = emailRef.current.value;
@@ -41,8 +49,13 @@ const Login = () => {
     }
     const resetPassword = async () => {
         const email = emailRef.current.value;
-        await sendPasswordResetEmail(email);
-        alert('Sent email');
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else {
+            toast('Please Enter Your Email');
+        }
     }
     return (
         <div>
@@ -71,8 +84,10 @@ const Login = () => {
                             </Form>
                             {errorMessage}
                             <h5 className='mt-4 text-center'>New to Rentiger Warehouse? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateToRegister}>Please Register</Link></h5>
-                            <h5 className='mt-4 text-center'>Forget Password? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</Link></h5>
+
+                            <h5 className='mt-4 text-center'>Forget Password? <button className='btn btn-link btn btn-lg text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></h5>
                             <SocialLogin></SocialLogin>
+                            <ToastContainer />
                         </div>
                     </div>
                     <div className='col-lg-5 col-md-6 col-12'>
