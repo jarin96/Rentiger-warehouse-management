@@ -1,0 +1,20 @@
+.manageinventory-container {
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+/* 
+@media only screen and (max-width: 576px) {
+    .manageinventory-container {
+        grid-template-columns: repeat(1, 1fr);
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .manageinventory-container img {
+        width: 100px;
+        height: 100px;
+    }
+} */
