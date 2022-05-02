@@ -2,12 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Inventory.css';
 const Inventory = ({ inventory }) => {
-    const { id, name, img, price, description, quantity, supplier } = inventory;
+    const { _id, name, img, price, description, quantity, supplier } = inventory;
     const navigate = useNavigate();
     const navigateInventory = info => {
         // navigate(`/inventory/${id}`);
-        navigate(`/inventory/${info.id}`, { state: info });
-        console.log(id);
+        navigate(`/inventory/${info._id}`, { state: info });
+        console.log(_id);
     }
     return (
         <div>
