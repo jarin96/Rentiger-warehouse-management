@@ -24,9 +24,9 @@ const InventoryDetail = () => {
     }
     return (
         <div>
-            <div className=' mx-auto w-50'>
-                <div className='container row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1'>
-                    <div className='inventory-detail col'>
+            <div className=' mx-auto '>
+                <div className='container row mx-auto'>
+                    <div className='inventory-detail col-lg-8 col-md-12 col-sm-12 p-5'>
                         <img className='img-fluid' src={inventory.img} alt="" />
                         <p className='inventory-name fst-italic fs-5'>Id: {id}</p>
                         <h2 className='inventory-name fst-italic fs-4'>Name: {inventory.name}</h2>
@@ -37,19 +37,23 @@ const InventoryDetail = () => {
                         <h4>Quantity: {inventory.quantity}</h4>
                         <button className='btn-inventory btn btn-outline-light' onClick={() => setQuantity(quantity - 1)}>Delivered</button>
                     </div>
-                    <div className='mx-auto w-50 ms-4'>
-                        <form onSubmit={submitForm}>
-                            <div className='mt-3'>
-                                <h5 className='inventory-name fst-italic fs-4'>Restock the items</h5>
-                                <input type="number" name="number" id="" />
-                                <button className='text-center btn-inventory btn btn-outline-light' onClick={() => setQuantity(quantity)}>Restock</button>
-                            </div>
-                        </form>
+                    <div className='mx-auto row text-center'>
+                        <div className='col-lg-8 col-md-12 col-sm-12 p-5'>
+                            <form onSubmit={submitForm}>
+                                <div className='mt-3'>
+                                    <h5 className='inventory-name fst-italic fs-4'>Restock the items</h5>
+                                    <input type="number" name="number" id="" />
+                                    <button className='text-center btn-inventory btn btn-outline-light' onClick={() => setQuantity(quantity)}>Restock</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div className='text-center mt-4'>
-                        <Link to='/manageinventory'>
-                            <button className='btn btn-dark btn btn-outline-primary'>Manage Inventories</button>
-                        </Link>
+                    <div className='mx-auto row text-center'>
+                        <div className='col-lg-8 col-md-12 col-sm-12 p-5'>
+                            <Link to='/manageinventory'>
+                                <button className='btn btn-dark btn btn-outline-primary'>Manage Inventories</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,8 @@ import auth from '../../../firebase.init';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const email = user?.email;
+    console.log(user);
     const handleLogOut = () => {
         signOut(auth);
     }
@@ -24,30 +26,17 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             {
-                                user ?
-                                    <Link to='/manageinventory'>
-                                        <button className='btn btn-link text-decoration-none'>Manage Items</button>
-                                    </Link>
-                                    :
-                                    ''}
-                            {
-                                user ?
-                                    <Link to='/additem'>
-                                        <button className='btn btn-link text-decoration-none'>Add Item</button>
-                                    </Link>
-                                    :
-                                    ''}
-                            {
-                                user ?
-                                    <Link to='/myitems'>
-                                        <button className='btn btn-link text-decoration-none'>My items</button>
-                                    </Link>
-                                    :
-                                    ''}
+                                user && <>
+                                    <Nav.Link as={Link} to="/manageinventory">Manage Items</Nav.Link>
+                                    <Nav.Link as={Link} to="/additem">Add Item</Nav.Link>
+                                    <Nav.Link as={Link} to="/myitems">My Items</Nav.Link>
+
+                                </>
+                            }
                             <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
                             {
                                 user ?
-                                    <button className='btn btn-link text-decoration-none' onClick={handleLogOut}>Log Out</button>
+                                    <button className='btn btn-link text-decoration-none' onClick={handleLogOut}>Log Out {email}</button>
                                     :
                                     <Nav.Link as={Link} to="login">
                                         Login

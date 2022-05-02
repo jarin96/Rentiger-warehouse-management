@@ -3,8 +3,25 @@ import './ManageInventories.css';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 const ManageInventories = ({ inventories }) => {
-    const { name, price, img, description, supplier, quantity, sold } = inventories;
+    const { _id, name, price, img, description, supplier, quantity, sold } = inventories;
+    console.log(inventories);
+    const handleDelete = (id) => {
+        const proceed = window.confirm('Are you sure you want to Delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/inventory/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+
+                })
+        }
+    }
+
     return (
         <div className='inventory-item mx-auto'>
             <div>
@@ -20,7 +37,7 @@ const ManageInventories = ({ inventories }) => {
                     <p>Sold: {sold}</p>
                 </div>
                 <div className="manage-item-delete me-4">
-                    <button className='btn btn-light rounded-3 btn btn-outline-danger'>Delete <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon> </button>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-light rounded-3 btn btn-outline-danger'>Delete <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon> </button>
                 </div>
             </div>
         </div>
