@@ -4,7 +4,21 @@ import img from '../../../images/dress1.png'
 
 const AddInventoryItem = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        const url = `http://localhost:5000/inventory`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
+    };
     return (
         <div>
             <div className='w-50 mx-auto'>
@@ -19,6 +33,7 @@ const AddInventoryItem = () => {
                                     <input className='mb-2' placeholder='Email' {...register("email")} />
                                     <input className='mb-2' placeholder='Quantity' {...register("quantity")} />
                                     <input className='mb-2' placeholder='Supplier' {...register("supplier")} />
+                                    <input className='mb-2' placeholder='Sold' {...register("sold")} />
                                     <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                                     <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
                                     <input type="submit" value='Add Item' />
