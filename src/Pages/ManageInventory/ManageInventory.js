@@ -27,7 +27,7 @@ const ManageInventory = () => {
         <div className='container'>
             <div className='manageinventory-container'>
                 {
-                    inventory.map(inventories => <div className='inventory-item mx-auto'>
+                    inventory.map(inventories => <div className='inventory-item mx-auto' key={inventories._id}>
                         <div>
                             <img src={inventories.img} alt="" />
                         </div>

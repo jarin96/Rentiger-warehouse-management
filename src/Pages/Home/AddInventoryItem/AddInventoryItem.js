@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import img from '../../../images/dress1.png'
+import img from '../../../images/dress1.png';
 
 const AddInventoryItem = () => {
     const { register, handleSubmit } = useForm();
@@ -24,7 +24,7 @@ const AddInventoryItem = () => {
             <div className='w-50 mx-auto'>
                 <div className='container info-background my-5'>
                     <h2 className='text-center fs-2 fw-bold p-2'>Add Items</h2>
-                    <div className='row border p-5 rounded bg-gradient d-flex justify-content-center align-items-center'>
+                    <div className='row border p-5 rounded bg-gradient d-flex justify-content-center align-items-center register-container'>
                         <div className='col-lg-8 col-md-6 col-12'>
                             <div>
                                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
@@ -41,7 +41,7 @@ const AddInventoryItem = () => {
                             </div>
                         </div>
                         <div className='col-lg-4 col-md-6 col-12'>
-                            <div className=' mt-2'>
+                            <div>
                                 <img src={img}
                                     className="d-block w-100 " alt="">
                                 </img>

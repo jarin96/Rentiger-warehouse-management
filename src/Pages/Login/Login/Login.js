@@ -25,7 +25,10 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     if (user) {
-        navigate(from, { replace: true });
+        const auth = localStorage.getItem('token')
+        if (auth) {
+            navigate(from, { replace: true });
+        }
     }
     if (loading || sending) {
         return <Loading></Loading>
@@ -42,6 +45,25 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
+        const user = {
+            email: email
+        }
+        fetch(`http://localhost:5000/login`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                localStorage.setItem('token', JSON.stringify(data));
+            })
+
+
+
     }
 
     const navigateToRegister = e => {

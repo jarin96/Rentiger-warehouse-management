@@ -1,3 +1,16 @@
+# Rentiger Warehouse
+# [Live Website of Rentiger Warehouse]()
+* This Project was about a Dresses warehouse.There are multiple dresses in the Inventory we can update their information by clicking on Update button.
+This project was create with simple bootstrap and vanilla css.
+
+* Users can see most important Inventory and Inventory Update information in the home page. 
+* Users can see banner, Sale and Collection in the home page.
+* Users can view different question and answer from BLogs page.
+* From Manage Inventory, user can delete a Inventory Product if he/she want also user can add new items from Add Item Also User can see her/his added items from My Item page.
+* Users can Login from the Login page and also can register from the register page if he/she is new to the website.Users will also get email verification message if the registration is completed.Users can also reset their password if they had forget the Password. 
+* List of technologies (frameworks, libraries) used in my projects: React Router, React Firebase Hooks,React Router Hooks, Firebase,Firebase-Authentication, React-Bootstrap, React, React-Toastify.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
