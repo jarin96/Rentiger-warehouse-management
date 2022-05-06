@@ -17,12 +17,14 @@ const SocialLogin = () => {
         </div>
 
     }
+
     if (loading) {
         return <Loading></Loading>
     }
     if (user) {
         navigate(from, { replace: true });
     }
+
     return (
         <div>
             {errorMessage}

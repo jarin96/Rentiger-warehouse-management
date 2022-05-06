@@ -1,8 +1,12 @@
 .inventory {
-    border: 1px solid lightgrey;
-    border-radius: 10px;
+    border: 1px solid rgb(228, 247, 247);
+    border-radius: 15px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+.inventory img {
+    border-radius: 8px;
 }
 
 .inventory-name {
