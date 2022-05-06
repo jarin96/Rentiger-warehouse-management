@@ -13,7 +13,7 @@ const MyItems = () => {
     const navigate = useNavigate();
     const [inventory, setInventory] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/item/${email}`)
+        fetch(`https://protected-dusk-73186.herokuapp.com/item/${email}`)
             .then(res => res.json())
             .then(data => setInventory(data));
     }, []);
@@ -29,7 +29,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to Delete?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://protected-dusk-73186.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

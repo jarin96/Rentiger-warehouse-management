@@ -6,7 +6,7 @@ const InventoryDetail = () => {
     const { id } = useParams();
     const [inventory, setInventory] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://protected-dusk-73186.herokuapp.com/inventory/${id}`;
 
         fetch(url)
             .then(res => res.json())
@@ -35,7 +35,7 @@ const InventoryDetail = () => {
         }
         setInventory(newData);
 
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://protected-dusk-73186.herokuapp.com/update/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -69,7 +69,7 @@ const InventoryDetail = () => {
             }
             setInventory(newData);
 
-            fetch(`http://localhost:5000/update/${id}`, {
+            fetch(`https://protected-dusk-73186.herokuapp.com/update/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
