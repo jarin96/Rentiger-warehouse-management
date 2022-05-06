@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyARP0dqtEjNfMO8yWux5KwnHMEyHSvzA6A",
-    authDomain: "rentiger-warehouse.firebaseapp.com",
-    projectId: "rentiger-warehouse",
-    storageBucket: "rentiger-warehouse.appspot.com",
-    messagingSenderId: "659600204662",
-    appId: "1:659600204662:web:3472b1ad0fd104204bd057"
+    apiKey:process.env.REACT_APP_apiKey,
+    authDomain:process.env.REACT_APP_authDomain,
+    projectId:process.env.REACT_APP_projectId,
+    storageBucket:process.env.REACT_APP_storageBucket,
+    messagingSenderId:process.env.REACT_APP_messagingSenderId,
+    appId:process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

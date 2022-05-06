@@ -24,7 +24,7 @@ const AddInventoryItem = () => {
             <div className='w-50 mx-auto'>
                 <div className='container info-background my-5'>
                     <h2 className='text-center fs-2 fw-bold p-2'>Add Items</h2>
-                    <div className='row border p-5 rounded bg-gradient d-flex justify-content-center align-items-center register-container'>
+                    <div className='row border p-5 rounded bg-gradient d-flex justify-content-center align-items-center'>
                         <div className='col-lg-8 col-md-6 col-12'>
                             <div>
                                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
