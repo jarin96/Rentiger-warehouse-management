@@ -1,0 +1,61 @@
+.occationware {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.occationware-container {
+    border: 1px solid rgb(228, 247, 247);
+    border-radius: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+.color {
+    color: rgb(103, 235, 191);
+}
+
+.img-border {
+    border: 4px solid rgb(216, 255, 242);
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+    .occationware {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .occationware-container {
+        border: 1px solid rgb(228, 247, 247);
+        border-radius: 15px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .occationware {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .occationware-container {
+        border: 1px solid rgb(228, 247, 247);
+        border-radius: 15px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .occationware {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .occationware-container {
+        border: 1px solid rgb(228, 247, 247);
+        border-radius: 15px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+}

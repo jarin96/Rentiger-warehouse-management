@@ -1,11 +1,15 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 const Blogs = () => {
+    useEffect(() => {
+        AOS.init();
+    })
     return (
         <div className='container info-background my-5'>
             <div className='row border p-5 rounded bg-gradient d-flex justify-content-center align-items-center'>
                 <div className='col-lg-12 col-md-6 col-12'>
-                    <div>
+                    <div data-aos="fade-down">
                         <h3> Difference between javascript and nodejs?</h3>
                         <p>Node Js is a Technology to build the back-end of applications with Javascript.
                             Google Chrome's V8 javascript engine powers Node.js.
